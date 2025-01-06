@@ -1,25 +1,59 @@
-// Student.java - Defines what information we store for each student
+/**
+ * Represents a student with a roll number, name, and address.
+ */
 public class Student {
-    // Student's basic information
-    private int rollno;      // ID number for the student
-    private String name;     // Student's name
-    private String address;  // Where the student lives
-    
-    // Creates a new student with their info
+    private int rollno;
+    private String name;
+    private String address;
+
+    /**
+     * Constructs a new student object with the given roll number, name, and
+     * address.
+     * 
+     * @param rollno  The roll number of the student.
+     * @param name    The name of the student.
+     * @param address The address of the student.
+     */
     public Student(int rollno, String name, String address) {
         this.rollno = rollno;
         this.name = name;
         this.address = address;
     }
-    
-    // Methods to get student info since our variables are private
-    public int getRollno() { return rollno; }
-    public String getName() { return name; }
-    public String getAddress() { return address; }
-    
-    // Makes student info print nicely
+
+    /**
+     * Returns the roll number of the student.
+     * 
+     * @return The roll number of the student.
+     */
+    public int getRollno() {
+        return rollno;
+    }
+
+    /**
+     * Returns the name of the student.
+     * 
+     * @return The name of the student.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Returns the address of the student.
+     * 
+     * @return The address of the student.
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Returns a string representation of the student object.
+     * 
+     * @return A string containing the student's roll number, name, and address.
+     */
     @Override
     public String toString() {
-        return "Student[rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+        return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
     }
 }
